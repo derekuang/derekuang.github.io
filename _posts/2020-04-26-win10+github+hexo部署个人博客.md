@@ -1,6 +1,6 @@
 ---
 title: win10+github+hexo部署个人博客
-tags: 教程
+tags: 教程 hexo
 ---
 
 ## 1. 安装软件
