@@ -99,7 +99,7 @@ tags: Erlang OTP gen_statem
 
 ## 5、事件类型
 
-- 事件分成不同的类型（[event types](http://erlang.org/doc/man/gen_statem.html#type-event_type)）。同状态下的不同类型的事件都在同一个回调函数中处理，回调函数以 `EventType `和 `EventContent `作为参数。事件类型如下：
+- 事件分成不同的类型。同状态下的不同类型的事件都在同一个回调函数中处理，回调函数以 `EventType `和 `EventContent `作为参数。事件类型如下：
 
   - `cast`：由`gen_statem:cast `生成
   - `{call, From}`：由 `gen_statem:call `生成，状态迁移动作返回 `{reply, From, Msg}` 或调用 `gen_statem:reply `时，会用到 `From `作为回复地址
