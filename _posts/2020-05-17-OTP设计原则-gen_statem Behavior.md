@@ -105,7 +105,7 @@ tags: Erlang OTP gen_statem
   - `{call, From}`：由 `gen_statem:call `生成，状态迁移动作返回 `{reply, From, Msg}` 或调用 `gen_statem:reply `时，会用到 `From `作为回复地址
   - `info`：发送给 `gen_statem` 进程的常规进程消息
   - `state_timeout`：状态迁移动作 `{state_timeout,Time,EventContent}` 生成
-  - `{timeout,Name}`：状态迁移动作 `{ {timeout,Name},Time,EventContent}` 生成
+  - `{timeout,Name}`：状态迁移动作 `{ {timeout,Name},Time,EventContent }` 生成
   - `timeout`：状态迁移动作 `{timeout,Time,EventContent}`（或简写为 Time）生成
   - `internal`：状态迁移动作 `{next_event,internal,EventContent}` 生成
 
@@ -451,7 +451,7 @@ tags: Erlang OTP gen_statem
           [Digit] ->
           do_unlock(),
               {next_state, open, Data#{remaining := Code},
-           [{{timeout,open_tm},10000,lock}]};
+           [{ {timeout,open_tm},10000,lock }]};
   ...
   
   open({timeout,open_tm}, lock, Data) ->
@@ -896,7 +896,7 @@ tags: Erlang OTP gen_statem
           {keep_state, Data#{remaining := Code}};
           {timeout, _} ->
               {keep_state, Data#{remaining := Code}};
-      {{call,From}, {button,Digit}} ->
+      { {call,From}, {button,Digit} } ->
           case Remaining of
           [Digit] -> % Complete
               {next_state, {open,LockButton}, Data,
@@ -920,7 +920,7 @@ tags: Erlang OTP gen_statem
           {keep_state_and_data, [{state_timeout,10000,lock}]};
       {state_timeout, lock} ->
           {next_state, {locked,LockButton}, Data};
-      {{call,From}, {button,Digit}} ->
+      { {call,From}, {button,Digit} } ->
           if
           Digit =:= LockButton ->
               {next_state, {locked,LockButton}, Data,
