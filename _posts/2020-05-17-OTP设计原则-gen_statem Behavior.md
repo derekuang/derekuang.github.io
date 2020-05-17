@@ -105,7 +105,7 @@ tags: Erlang OTP gen_statem
   - `{call, From}`：由 `gen_statem:call `生成，状态迁移动作返回 `{reply, From, Msg}` 或调用 `gen_statem:reply `时，会用到 `From `作为回复地址
   - `info`：发送给 `gen_statem` 进程的常规进程消息
   - `state_timeout`：状态迁移动作 `{state_timeout,Time,EventContent}` 生成
-  - `{timeout,Name}`：状态迁移动作 `{{timeout,Name},Time,EventContent}` 生成
+  - `{timeout,Name}`：状态迁移动作 `{ {timeout,Name},Time,EventContent}` 生成
   - `timeout`：状态迁移动作 `{timeout,Time,EventContent}`（或简写为 Time）生成
   - `internal`：状态迁移动作 `{next_event,internal,EventContent}` 生成
 
@@ -442,7 +442,7 @@ tags: Erlang OTP gen_statem
 
 - 下面是用**一般超时**实现来替代**状态超时**的例子，定时器名字是 `open_tm `：
 
-  ```
+  ```erlang
   ...
   locked(
     cast, {button,Digit},
