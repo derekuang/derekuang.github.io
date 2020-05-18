@@ -162,7 +162,7 @@ article_header:
 
       `Integer(整数值)`：使用`exit(Child, shutdown)`通知子进程退出，等待返回。如果指定时间内没收到退出信号（超时），改为使用`brutal_kill`的方式
 
-      `infinity`：子进程是`supervisor`时的使用，让子监控树有足够时间退出。警告：如果子进程是`worker`，应当安全实现子进程，确保子进程会返回
+      `infinity`：一般情况下子进程是`supervisor`时使用，让子监控树有足够时间退出。警告：如果子进程是`worker`，应当安全实现子进程，确保子进程会返回
 
     - 可选项；当子进程为`worker`，默认值为5000；当子进程为`supervisor`，默认值为`infinity`
 
