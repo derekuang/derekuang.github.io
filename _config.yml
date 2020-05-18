@@ -37,8 +37,8 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : person # "person" (default), "organization"
   name      : Derek Kuang
-  url       : /avatar.jpg
-  avatar    : # path or url of avatar image (square)
+  url       : 
+  avatar    : /avatar.jpg # path or url of avatar image (square)
   bio       : 
   email     : k2497808365@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
