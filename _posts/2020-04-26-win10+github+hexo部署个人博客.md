@@ -2,9 +2,9 @@
 title: win10+github+hexo部署个人博客
 tags: 教程 hexo
 article_header:
-	type: cover
-	image: 
-		src: /assets/images/20200426.jpg
+  type: cover
+  image: 
+    src: /assets/images/20200426.jpg
 ---
 
 ## 1. 安装软件
