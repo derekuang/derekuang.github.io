@@ -1,6 +1,10 @@
 ---
 title: OTP设计原则-gen_statem Behavior
 tags: Erlang OTP gen_statem
+article_header:
+  type: cover
+  image: 
+    src: /assets/images/20200517.jpg
 ---
 
 

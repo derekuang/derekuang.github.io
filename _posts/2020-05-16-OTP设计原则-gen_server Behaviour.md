@@ -1,6 +1,10 @@
 ---
 title: OTP设计原则-gen_server Behaviour
 tags: Erlang OTP gen_server
+article_header:
+  type: cover
+  image: 
+    src: /assets/images/20200516.jpg
 ---
 
 
