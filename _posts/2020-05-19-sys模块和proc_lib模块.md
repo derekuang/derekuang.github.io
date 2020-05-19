@@ -56,8 +56,8 @@ article_header:
   Lock
   *DBG* code_lock consume state_timeout lock in state open
   8> sys:statistics(code_lock, get).
-  {ok,[{start_time,{{2017,4,21},{16,8,7}}},
-       {current_time,{{2017,4,21},{16,9,42}}},
+  {ok,[{start_time,{ {2017,4,21},{16,8,7} }},
+       {current_time,{ {2017,4,21},{16,9,42} }},
        {reductions,2973},
        {messages_in,5},
        {messages_out,0}]}
@@ -184,8 +184,8 @@ article_header:
   ch4 event = {in,{free,ch1}}
   ok
   6> sys:statistics(ch4, get).
-  {ok,[{start_time,{{2003,6,13},{9,47,5}}},
-       {current_time,{{2003,6,13},{9,47,56}}},
+  {ok,[{start_time,{ {2003,6,13},{9,47,5} }},
+       {current_time,{ {2003,6,13},{9,47,56} }},
        {reductions,109},
        {messages_in,2},
        {messages_out,1}]}
