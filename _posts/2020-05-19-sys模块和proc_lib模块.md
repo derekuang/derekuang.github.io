@@ -4,7 +4,7 @@ tags: Erlang OTP sys proc_lib
 article_header:
   type: cover
   image:
-    src: /assets/image/20200519.jpg
+    src: /assets/images/20200519.jpg
 ---
 
 
@@ -232,7 +232,7 @@ article_header:
 
 
 
-## 4、**Debugging（支持`sys`模块的debug工具）**
+## 4、**Debugging（支持sys模块的debug工具）**
 
 - 要支持`sys`的debug工具，需要有**debug结构**——Deb，通过`sys:debug_options/1`初始生成
 
