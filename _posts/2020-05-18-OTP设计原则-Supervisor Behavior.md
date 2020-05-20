@@ -1,6 +1,6 @@
 ---
 title: OTP设计原则-Supervisor Behavior
-tags: Erlang OTP Supervisor
+tags: Erlang OTP supervisor
 article_header:
   type: cover
   image:

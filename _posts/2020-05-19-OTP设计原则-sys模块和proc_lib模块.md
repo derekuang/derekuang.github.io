@@ -1,5 +1,5 @@
 ---
-title: sys模块和proc_lib模块
+title: OTP设计原则-sys模块和proc_lib模块
 tags: Erlang OTP sys proc_lib
 article_header:
   type: cover
