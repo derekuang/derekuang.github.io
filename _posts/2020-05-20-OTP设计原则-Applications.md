@@ -22,22 +22,21 @@ article_header:
 
 - 回调函数：
 
-  - start(StartType, StartArgs) -> {ok, Pid} | {ok, Pid, State}
-
-    - 在启动应用时调用，通过顶层的`supervisor`创建监控树
-
-    - `StartType`：通常是`normal``
-
-    - ``StartArgs`：由应用资源文件中的mod指定
-
-    - `Pid`：顶层`supervisor`的`pid``
-
-    - `State`：状态值会传递给`stop`函数
-
-    - `stop(State)`
+  - `start(StartType, StartArgs) -> {ok, Pid} | {ok, Pid, State}`
+- 在启动应用时调用，通过顶层的`supervisor`创建监控树
+    
+- `StartType`：通常是`normal`
+    
+- `StartArgs`：由应用资源文件中的mod指定
+    
+- `Pid`：顶层`supervisor`的`pid`
+    
+- `State`：状态值会传递给`stop`函数
+    
+- `stop(State)`
     
   - 在应用停止后调用，做清理工作（实际应用即监控树的终止是自动处理的）
-
+  
 - 打包前文的`supervisor behaviour`监控树作为应用，回调模块如下：
 
   ```erlang
