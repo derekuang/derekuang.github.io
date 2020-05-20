@@ -71,7 +71,7 @@ article_header:
 
   示意图：
 
-  ![启动时同步](..\article_image\synchronizing_processes_during_startup.PNG)
+  ![启动时同步](https://derekuang.github.io/article_image/synchronizing_processes_during_startup.PNG)
 
   启动原处应用跟正常启动应用是**一样**的，如下：
 
