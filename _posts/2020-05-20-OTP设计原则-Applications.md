@@ -24,17 +24,17 @@ article_header:
 
   - `start(StartType, StartArgs) -> {ok, Pid} | {ok, Pid, State}`
 - 在启动应用时调用，通过顶层的`supervisor`创建监控树
-    
+  
 - `StartType`：通常是`normal`
-    
+  
 - `StartArgs`：由应用资源文件中的mod指定
-    
+  
 - `Pid`：顶层`supervisor`的`pid`
-    
+  
 - `State`：状态值会传递给`stop`函数
-    
+  
 - `stop(State)`
-    
+  
   - 在应用停止后调用，做清理工作（实际应用即监控树的终止是自动处理的）
   
 - 打包前文的`supervisor behaviour`监控树作为应用，回调模块如下：
@@ -80,8 +80,21 @@ article_header:
    [{mod, {ch_app,[]}}]}.
   ```
 
-- 参数解析：
+- 示例
 
+  ```erlang
+  {application, ch_app,
+   [{description, "Channel allocator"},
+    {vsn, "1"},
+    {modules, [ch_app, ch_sup, ch3]},
+    {registered, [ch3]},
+    {applications, [kernel, stdlib, sasl]},
+    {mod, {ch_app,[]}}
+   ]}.
+  ```
+  
+  参数解析：
+  
   - `description`：简短的描述；字符串；默认值“”
   - `vsn`：版本号；字符串；默认值“”
   - `modules`：应用引入的所有模块，生成启动脚本和`tar`文件时`systools`会用此列表；默认值[]
