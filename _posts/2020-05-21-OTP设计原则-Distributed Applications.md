@@ -4,7 +4,7 @@ tags: Erlang OTP application
 article_header:
   type: cover
   image:
-	src: /assets/images/20200521.jpg
+    src: /assets/images/20200521.jpg
 ---
 
 
